@@ -1,0 +1,24 @@
+# EENG 415
+# HW1
+# Josh Wojciechowicz
+import random
+import matplotlib.pyplot as plt
+
+data = random.sample(range(1, 1000), 200)
+
+plt.hist(data)
+plt.show()
+
+
+data.sort()
+n=len(data)
+
+mean = sum(data) / len(data)
+
+if n % 2 == 0:
+    median1 = data[n//2]
+    median2 = data[n//2 - 1]
+    median = (median1 + median2)/2
+else:
+    median = data[n//2]
+
